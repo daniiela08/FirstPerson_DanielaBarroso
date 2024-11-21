@@ -1,18 +1,21 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FP : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float velocidadMov;
+    private CharacterController controlador;
+    
     void Start()
     {
-        
+        controlador = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
 }
