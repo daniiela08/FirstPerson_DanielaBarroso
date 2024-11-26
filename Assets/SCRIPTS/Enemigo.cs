@@ -9,6 +9,11 @@ public class Enemigo : MonoBehaviour
     private FP jugador;
     private Animator anim;
 
+    private bool OpenWindow;
+    [SerializeField] private Transform puntoAtaque;
+    [SerializeField] private float radioDet;
+    [SerializeField] private LayerMask queesdañable;
+    [SerializeField] private float dañoEnemigo;
     private bool canDamage;
 
     Rigidbody[] huesos;
@@ -31,6 +36,10 @@ public class Enemigo : MonoBehaviour
         if (agente.enabled)
         {
             Seguir();
+        }
+        if (OpenWindow && canDamage)
+        {
+            DetectImpact();
         }
     }
     private void Seguir()
@@ -55,5 +64,31 @@ public class Enemigo : MonoBehaviour
         anim.enabled = false;
         agente.enabled = false;
         Destroy(gameObject, 15);
+    }
+    private void DetectImpact()
+    {
+        Collider[] collsdetectadas = Physics.OverlapSphere(puntoAtaque.position, radioDet, queesdañable);
+        if (collsdetectadas.Length > 0)
+        {
+            for (int i = 0; i < collsdetectadas.Length; i++)
+            {
+                collsdetectadas[i].GetComponent<FP>().RecibirDaño(dañoEnemigo);
+            }
+            canDamage = false;
+        }
+    }
+    private void FinAtaque()
+    {
+        agente.isStopped = false;
+        anim.SetBool("isAttacking", false);
+        canDamage = true;
+    }
+    private void abrirVentana()
+    {
+        OpenWindow = true;
+    }
+    private void cerrarVentana()
+    {
+        OpenWindow = false;
     }
 }

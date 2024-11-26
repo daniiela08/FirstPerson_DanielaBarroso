@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FP : MonoBehaviour
 {
+    [SerializeField] private float vidas;
+
     [SerializeField] private float velocidadMov;
     CharacterController controlador;
     [SerializeField] private float gravedad;
@@ -71,5 +73,9 @@ public class FP : MonoBehaviour
         {
             movimientoVertical.y = math.sqrt(-2 * gravedad * alturaSalto);
         }
+    }
+    public void RecibirDaño(float dañoEnemigo)
+    {
+        vidas -= dañoEnemigo;
     }
 }
