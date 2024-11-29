@@ -1390,7 +1390,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.242, y: 107.14, z: 183.396}
-  m_LocalScale: {x: 1.388446, y: 1.388446, z: 1.388446}
+  m_LocalScale: {x: 5.4577727, y: 5.4577727, z: 5.4577727}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7607367128470728330}
@@ -1427,7 +1427,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2749,7 +2749,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.4180383, y: -0.24023478, z: 0.19668578, w: 0.8537248}
   m_LocalPosition: {x: 0.32647875, y: 1.027, z: 0.909}
-  m_LocalScale: {x: 0.72022957, y: 0.7202298, z: 0.7202297}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 381490195754014662}
@@ -3493,7 +3493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScript: {fileID: 4216533323368749287}
-  "multiplicadorDa\xF1o": 0
+  "multiplicadorDa\xF1o": 1
 --- !u!65 &3271807978104935059
 BoxCollider:
   m_ObjectHideFlags: 0
