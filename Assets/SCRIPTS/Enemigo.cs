@@ -56,6 +56,7 @@ public class Enemigo : MonoBehaviour
         for (int i = 0; i < huesos.Length; i++)
         {
             huesos[i].isKinematic = State;
+            huesos[i].useGravity = State;
         }
     }
     public void Dead()
