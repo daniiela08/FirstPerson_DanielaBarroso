@@ -30,6 +30,16 @@ public class Interacciones : MonoBehaviour
                     scriptBoton.PulsarBoton();
                 }
             }
+            if (hit.transform.TryGetComponent(out Caja scriptCaja))
+            {
+                interaccionActual = scriptCaja.transform;
+                interaccionActual.GetComponent<Outline>().enabled = true;
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    scriptCaja.Abrir();
+                }
+            }
         }
         else if (interaccionActual != null)
         {
