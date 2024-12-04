@@ -40,6 +40,16 @@ public class Interacciones : MonoBehaviour
                     scriptCaja.Abrir();
                 }
             }
+            if (hit.transform.TryGetComponent(out Coleccionable scriptColec))
+            {
+                interaccionActual = scriptColec.transform;
+                interaccionActual.GetComponent<Outline>().enabled = true;
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    scriptColec.Destruir();
+                }
+            }
         }
         else if (interaccionActual != null)
         {

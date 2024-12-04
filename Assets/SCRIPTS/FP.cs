@@ -18,6 +18,8 @@ public class FP : MonoBehaviour
     [SerializeField] private Transform pies;
     [SerializeField] private LayerMask queEsSuelo;
 
+    [SerializeField] private int puntos = 0;
+
     void Start()
     {
         controlador = GetComponent<CharacterController>();
@@ -77,5 +79,9 @@ public class FP : MonoBehaviour
     public void RecibirDaño(float dañoEnemigo)
     {
         vidas -= dañoEnemigo;
+    }
+    public void ReceivePoints(int numeroObjetos)
+    {
+        puntos += numeroObjetos;
     }
 }
