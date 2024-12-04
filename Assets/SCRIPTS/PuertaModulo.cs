@@ -5,18 +5,28 @@ using UnityEngine;
 public class PuertaModulo : MonoBehaviour
 {
     private Animator anim;
-    private MeshRenderer obj;
+    private MeshRenderer meshRenderer;
+    private BoxCollider coll;
+
+    [SerializeField] private Spawner spawner;
     private void Start()
     {
         anim = GetComponent<Animator>();
-        obj = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        coll = GetComponent<BoxCollider>();
     }
     public void Cerrar()
     {
-
+        meshRenderer.enabled = true;
+        coll.isTrigger = false;
+        spawner.gameObject.SetActive(true);
+        //StartCoroutine(Parpadeo());
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        Cerrar();
+        if(other.CompareTag("Player"))
+        {
+            Cerrar();
+        }
     }
 }

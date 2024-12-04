@@ -64,7 +64,7 @@ public class Enemigo : MonoBehaviour
         ChangeJointsState(false);
         anim.enabled = false;
         agente.enabled = false;
-        Destroy(gameObject, 15);
+        
     }
     private void DetectImpact()
     {
