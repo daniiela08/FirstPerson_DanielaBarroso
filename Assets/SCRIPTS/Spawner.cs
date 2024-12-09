@@ -10,6 +10,18 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int spawnxRonda;
     [SerializeField] private float esperaRondas;
     [SerializeField] private float esperaSpawns;
+
+    private int enemigosASpawnear;
+    private int enemigosPorMatar;
+
+    public int EnemigosPorMatar { get => enemigosPorMatar; set => enemigosPorMatar = value; }
+
+    private void Awake()
+    {
+        enemigosASpawnear = spawnxRonda * rondas; //10
+        enemigosPorMatar = enemigosASpawnear; //10
+        
+    }
     void Start()
     {
         StartCoroutine(SpawnSystem());
@@ -24,8 +36,8 @@ public class Spawner : MonoBehaviour
             {
                 for (int j = 0; j < spawnxRonda; j++)
                 {
-                    Instantiate(prefabEnemigo[Random.Range(0, prefabEnemigo.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
-
+                    GameObject copiaEnemigo = Instantiate(prefabEnemigo[Random.Range(0, prefabEnemigo.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+                    copiaEnemigo.GetComponent<Enemigo>().MiSpawner = this;
                     yield return new WaitForSeconds(esperaSpawns);
                 }
                 //actualizar texto ronda

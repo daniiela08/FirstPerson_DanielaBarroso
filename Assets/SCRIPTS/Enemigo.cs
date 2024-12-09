@@ -8,6 +8,7 @@ public class Enemigo : MonoBehaviour
     private NavMeshAgent agente;
     private FP jugador;
     private Animator anim;
+    private Spawner miSpawner;
 
     private bool OpenWindow;
     [SerializeField] private Transform puntoAtaque;
@@ -21,6 +22,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float vidasEnemigo;
 
     public float VidasEnemigo { get => vidasEnemigo; set => vidasEnemigo = value; }
+    public Spawner MiSpawner { get => miSpawner; set => miSpawner = value; }
 
     void Start()
     {
@@ -64,7 +66,7 @@ public class Enemigo : MonoBehaviour
         ChangeJointsState(false);
         anim.enabled = false;
         agente.enabled = false;
-        
+        miSpawner.EnemigosPorMatar--;   
     }
     private void DetectImpact()
     {
