@@ -18,7 +18,9 @@ public class FP : MonoBehaviour
     [SerializeField] private Transform pies;
     [SerializeField] private LayerMask queEsSuelo;
 
-    [SerializeField] private int puntos = 0;
+    [SerializeField] private int puntos;
+
+    public int Puntos { get => puntos; set => puntos = value; }
 
     void Start()
     {

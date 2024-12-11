@@ -5,6 +5,8 @@ using UnityEngine;
 public class boton : MonoBehaviour
 {
     private Animator anim;
+    [SerializeField] PuertaModuloInicio scriptP;
+    [SerializeField] Spawner spawner;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -12,5 +14,7 @@ public class boton : MonoBehaviour
     public void PulsarBoton()
     {
         anim.SetTrigger("pulsar");
+        scriptP.AbrirPuerta();
+        spawner.gameObject.SetActive(true);
     }
 }

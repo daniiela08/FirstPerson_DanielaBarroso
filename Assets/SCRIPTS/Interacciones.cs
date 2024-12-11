@@ -50,6 +50,16 @@ public class Interacciones : MonoBehaviour
                     scriptColec.Destruir();
                 }
             }
+            if (hit.transform.TryGetComponent(out UFO scriptUfo))
+            {
+                interaccionActual = scriptUfo.transform;
+                interaccionActual.GetComponent<Outline>().enabled = true;
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    scriptUfo.Ganar();
+                }
+            }
         }
         else if (interaccionActual != null)
         {
