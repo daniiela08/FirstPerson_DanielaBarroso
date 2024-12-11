@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ParteEnemigo
   - Enemigo
+  - TrackingObject
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Armas
   - 
   - 
   - 

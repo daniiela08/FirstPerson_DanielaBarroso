@@ -18,6 +18,8 @@ public class FP : MonoBehaviour
     [SerializeField] private Transform pies;
     [SerializeField] private LayerMask queEsSuelo;
 
+    [SerializeField] private Outline outlineOvni;
+
     [SerializeField] private int puntos;
 
     public int Puntos { get => puntos; set => puntos = value; }
@@ -85,5 +87,10 @@ public class FP : MonoBehaviour
     public void ReceivePoints(int numeroObjetos)
     {
         puntos += numeroObjetos;
+
+        if(puntos > 5)
+        {
+            outlineOvni.OutlineColor = Color.green;
+        }
     }
 }

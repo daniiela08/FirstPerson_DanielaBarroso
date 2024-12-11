@@ -16,7 +16,7 @@ public class UFO : MonoBehaviour
     }
     public void Ganar()
     {
-        if (mainScript.Puntos == 4)
+        if (mainScript.Puntos == 6)
         {
             SceneManager.LoadScene(2);
         }

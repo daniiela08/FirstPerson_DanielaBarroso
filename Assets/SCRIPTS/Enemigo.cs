@@ -15,7 +15,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float radioDet;
     [SerializeField] private LayerMask queesdañable;
     [SerializeField] private float dañoEnemigo;
-    private bool canDamage;
+    private bool canDamage, isDead;
 
     Rigidbody[] huesos;
 
@@ -63,10 +63,14 @@ public class Enemigo : MonoBehaviour
     }
     public void Dead()
     {
-        ChangeJointsState(false);
-        anim.enabled = false;
-        agente.enabled = false;
-        miSpawner.EnemigosPorMatar--;   
+        if(!isDead)
+        {
+            ChangeJointsState(false);
+            anim.enabled = false;
+            agente.enabled = false;
+            miSpawner.EnemigosPorMatar--;
+            isDead = true;
+        }
     }
     private void DetectImpact()
     {

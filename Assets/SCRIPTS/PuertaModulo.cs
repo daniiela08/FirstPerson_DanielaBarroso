@@ -36,6 +36,7 @@ public class PuertaModulo : MonoBehaviour
         meshRenderer.enabled = true;
         coll.isTrigger = false;
         spawner.gameObject.SetActive(true);
+        Debug.Log("Se cierra!");
         //StartCoroutine(Parpadeo());
     }
 

@@ -24,6 +24,7 @@ public class Spawner : MonoBehaviour
     }
     void Start()
     {
+        Debug.Log("Empiezo a spawnear");
         StartCoroutine(SpawnSystem());
     }
     void Update()
