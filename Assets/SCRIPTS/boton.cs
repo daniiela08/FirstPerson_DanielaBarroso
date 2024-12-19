@@ -13,7 +13,7 @@ public class boton : MonoBehaviour
     }
     public void PulsarBoton()
     {
-        anim.SetTrigger("pulsar");
+        anim.SetTrigger("Pulsar");
         scriptP.AbrirPuerta();
         spawner.gameObject.SetActive(true);
     }
