@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FP : MonoBehaviour
 {
@@ -83,6 +84,11 @@ public class FP : MonoBehaviour
     public void RecibirDaño(float dañoEnemigo)
     {
         vidas -= dañoEnemigo;
+
+        if (vidas <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
     public void ReceivePoints(int numeroObjetos)
     {

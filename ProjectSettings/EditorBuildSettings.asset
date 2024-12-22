@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GANAR.unity
     guid: ebe55ee780473a5489be85797d0c2589
+  - enabled: 1
+    path: Assets/Scenes/Muerte.unity
+    guid: 35ccba812485bf248903e98b0ef1ff1f
   m_configObjects: {}
