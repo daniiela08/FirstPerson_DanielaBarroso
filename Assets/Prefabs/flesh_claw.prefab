@@ -117,11 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntoAtaque: {fileID: 4661261140902825352}
-  radioDet: 0.5
-  "queesda\xF1able":
+  radioDet: 1
+  queEsDanable:
     serializedVersion: 2
     m_Bits: 64
-  "da\xF1oEnemigo": 5
+  danioenemigo: 5
 --- !u!135 &1843387656902154966
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -141,8 +141,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.19742095
-  m_Center: {x: 0, y: 0.42361012, z: -0.018154664}
+  m_Radius: 0.17016034
+  m_Center: {x: 0.000000109253556, y: 0.4410848, z: -0.0964403}
 --- !u!1 &3004858372062318866
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6507326572034934457}
-  m_LocalEulerAnglesHint: {x: -84.41814, y: 22.499979, z: -157.50002}
+  m_LocalEulerAnglesHint: {x: -88.87917, y: 180, z: 180}
 --- !u!1 &3452598568115451508
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +294,7 @@ Transform:
   m_Children:
   - {fileID: 8402564099444951075}
   m_Father: {fileID: 1214721344523733817}
-  m_LocalEulerAnglesHint: {x: -66.16675, y: 180, z: -180}
+  m_LocalEulerAnglesHint: {x: -85.25884, y: 180, z: -180}
 --- !u!1 &8234735066185726859
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_Children:
   - {fileID: 6507326572034934457}
   m_Father: {fileID: 4516312555763509683}
-  m_LocalEulerAnglesHint: {x: 13.70503, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.563614, y: 0, z: 0}
 --- !u!1 &9131054095402933241
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,4 +358,4 @@ Transform:
   m_Children:
   - {fileID: 1214721344523733817}
   m_Father: {fileID: 4654827927714974375}
-  m_LocalEulerAnglesHint: {x: -84.680466, y: 180, z: -180}
+  m_LocalEulerAnglesHint: {x: -89.84676, y: 180, z: 180}

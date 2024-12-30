@@ -12,6 +12,10 @@ public class cambiosEscenas : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
+    public void EscenaMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void MenuOpciones()
     {
         menuPrincipal.SetActive(false);

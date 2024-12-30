@@ -19,6 +19,7 @@ public class UFO : MonoBehaviour
         if (mainScript.Puntos == 6)
         {
             SceneManager.LoadScene(2);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

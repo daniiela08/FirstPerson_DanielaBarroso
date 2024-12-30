@@ -6,8 +6,8 @@ public class garra : MonoBehaviour
 {
     [SerializeField] private Transform puntoAtaque;
     [SerializeField] private float radioDet;
-    [SerializeField] private LayerMask queesdañable;
-    [SerializeField] private float dañoEnemigo;
+    [SerializeField] private LayerMask queEsDanable;
+    [SerializeField] private float danioenemigo;
     private bool canDamage;
     void Start()
     {
@@ -22,12 +22,12 @@ public class garra : MonoBehaviour
     }
     private void DetectImpact()
     {
-        Collider[] collsdetectadas = Physics.OverlapSphere(puntoAtaque.position, radioDet, queesdañable);
+        Collider[] collsdetectadas = Physics.OverlapSphere(puntoAtaque.position, radioDet, queEsDanable);
         if (collsdetectadas.Length > 0)
         {
             for (int i = 0; i < collsdetectadas.Length; i++)
             {
-                collsdetectadas[i].GetComponent<FP>().RecibirDaño(dañoEnemigo);
+                collsdetectadas[i].GetComponent<FP>().RecibirDaño(danioenemigo);
             }
             canDamage = false;
         }

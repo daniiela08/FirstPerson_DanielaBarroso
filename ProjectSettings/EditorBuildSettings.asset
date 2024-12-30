@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Muerte.unity
     guid: 35ccba812485bf248903e98b0ef1ff1f
+  - enabled: 1
+    path: Assets/Scenes/DespuesCInematica.unity
+    guid: 315353113db897546b511a32f6e57ffe
   m_configObjects: {}

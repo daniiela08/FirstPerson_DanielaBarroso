@@ -125,6 +125,7 @@ public class FP : MonoBehaviour
         {
             //cambio de escena o lo que quiera para indicar que he muerto
             SceneManager.LoadScene(3);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     //lo mismo que el anterior, en este caso necesito objetos que recojo para sumar puntos
@@ -133,7 +134,7 @@ public class FP : MonoBehaviour
         //los puntos suben segun los objetos que cojo
         puntos += numeroObjetos;
         //si los puntos son mayores que 5, de 6 para arriba
-        if(puntos > 5)
+        if (puntos > 5) 
         {
             //el color del borde del ovni cambia a verde (si no se mantiene en rojo)
             outlineOvni.OutlineColor = Color.green;
