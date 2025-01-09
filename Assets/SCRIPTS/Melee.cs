@@ -9,15 +9,18 @@ public class Melee : MonoBehaviour
     private Camera cam;
 
     private Animator anim;
+    private AudioSource espada;
     void Start()
     {
         cam = Camera.main;
         anim = GetComponent<Animator>();
+        espada = GetComponent<AudioSource>();
     }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            espada.Play();
             anim.SetTrigger("Ataque");
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, myData.DistanciaAtaque))
             {

@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class FP : MonoBehaviour
 {
     [SerializeField] private float vidas;
+    [SerializeField] private TMP_Text textoVidas;
 
     //MOVIMIENTO
     //velocidad a la que te mueves
@@ -35,6 +37,7 @@ public class FP : MonoBehaviour
 
     //para contar cada vez que cojo un objeto
     [SerializeField] private int puntos;
+
     //alt+enter, encapsular y seguir usando, y puedes sumar puntos desde otro script
     public int Puntos { get => puntos; set => puntos = value; }
 
@@ -44,6 +47,8 @@ public class FP : MonoBehaviour
         controlador = GetComponent<CharacterController>();
         //esconder el cursor del raton
         Cursor.lockState = CursorLockMode.Locked;
+        //poner el texto de las vidas al maximo (100)
+        textoVidas.text = vidas.ToString();
     }
 
     void Update()
@@ -118,8 +123,9 @@ public class FP : MonoBehaviour
     //en este caso con el daño que recibiras del enemigo recibiras daño
     public void RecibirDaño(float dañoEnemigo)
     {
-        //las vidas de tu personaje bajaran segun el daño que te hagan
+        //las vidas de tu personaje bajaran segun el daño que te hagan y el trexto se actualiza
         vidas -= dañoEnemigo;
+        textoVidas.text = vidas.ToString();
         //si las vidas son menores o iguales a 0 (mueres)
         if (vidas <= 0)
         {

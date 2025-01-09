@@ -15,7 +15,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float radioDet;
     [SerializeField] private LayerMask queesdañable;
     [SerializeField] private float dañoEnemigo;
-    private bool canDamage, isDead;
+    private bool canDamage = true, isDead;
 
     Rigidbody[] huesos;
 
