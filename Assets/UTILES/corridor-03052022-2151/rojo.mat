@@ -9,10 +9,9 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: rojo
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 58ee7469489eb544bb39c3d2cc67d3e3, type: 2}
+  m_Parent: {fileID: 2100000, guid: 13eb14f380693ac4bb185c0c9a0f29a8, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _EMISSION
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -28,8 +27,8 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 0.94117653, g: 0.94117653, b: 0.94117653, a: 1}
+    - _Color: {r: 0.94117653, g: 0.94117653, b: 0.94117653, a: 1}
     - _EmissionColor: {r: 0.83018863, g: 0.011747931, b: 0.011747931, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2812133123528182056
