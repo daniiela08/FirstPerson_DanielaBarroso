@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5720760466670678899}
   - component: {fileID: 6648776326293092752}
   m_Layer: 0
-  m_Name: luces modilo1
+  m_Name: MODULO3LUCES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 711.2
   m_Range: 10
   m_SpotAngle: 30
